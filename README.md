@@ -27,12 +27,13 @@ Plugins included in this image are:
 
 ## Usage
 
+
 Creating a new project::
 
-   $ docker -ti -v $PWD:/work sphinx sphinx-quickstart
+   $ docker run -u `id -u`:`id -g` --rm -ti -v `pwd`:/work lnoor/sphinx sphinx-quickstart
 
 Build documentation::
 
-   $ docker -ti -v $PWD:/work sphinx make clean html epub latexpdf
+   $ docker run -u `id -u`:`id -g` --rm -ti -v `pwd`:/work lnoor/sphinx make html epub latexpdf
 
 Note that the plugins are provided but you still need to enable them in your config file.
