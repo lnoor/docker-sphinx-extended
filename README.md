@@ -20,20 +20,21 @@ Plugins included in this image are:
 - [sphinxcontrib-blockdiag](https://pypi.org/project/sphinxcontrib-blockdiag/)
 - [sphinxcontrib-actdiag](https://pypi.org/project/sphinxcontrib-actdiag/)
 - [ablog](https://ablog.readthedocs.io/)
-- [tinkerer](http://tinkerer.me/)
 - [sphinxcontrib-wiki](https://pypi.org/project/sphinxcontrib-wiki/)
-- [tinkerer-localpost](https://pypi.org/project/Tinkerer-Localpost/)
 - [sphinxcontrib-fulltoc](https://sphinxcontrib-fulltoc.readthedocs.io/en/latest/)
+
+Unfortunately [tinkerer](http://tinkerer.me/) and [tinkerer-localpost](https://pypi.org/project/Tinkerer-Localpost/)
+had to be dropped since they are no longer maintained.
 
 ## Usage
 
 
 Creating a new project::
 
-   $ docker run -u `id -u`:`id -g` --rm -ti -v `pwd`:/work lnoor/sphinx sphinx-quickstart
+   $ docker run -u `id -u`:`id -g` --rm -ti -v `pwd`:/work lnoor/sphinx-extended sphinx-quickstart
 
 Build documentation::
 
-   $ docker run -u `id -u`:`id -g` --rm -ti -v `pwd`:/work lnoor/sphinx make html epub latexpdf
+   $ docker run -u `id -u`:`id -g` --rm -ti -v `pwd`:/work lnoor/sphinx-extended make html epub latexpdf
 
 Note that the plugins are provided but you still need to enable them in your config file.
