@@ -14,6 +14,6 @@ RUN pip3 install --no-cache-dir reportlab aafigure Pillow \
     sphinx-togglebutton sphinxcontrib-httpdomain sphinx-business-theme \
     sphinx-theme-material sphinxcontrib-nwdiag sphinxcontrib-seqdiag \
     sphinxcontrib-aafig sphinxcontrib-blockdiag sphinxcontrib-actdiag \
-    ablog sphinxcontrib-wiki sphinxcontrib-fulltoc
+    ablog sphinxcontrib-wiki sphinxcontrib-fulltoc sphinx-autodoc-typehints
 
 # RUN pip3 install --no-cache-dir tinkerer tinkerer-localpost
