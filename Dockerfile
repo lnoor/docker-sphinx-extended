@@ -1,4 +1,4 @@
-FROM lnoor/sphinx:2.0.0
+FROM lnoor/sphinx:2.0.1
 
 RUN apt-get update \
     && apt-get -y upgrade \
